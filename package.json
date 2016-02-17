@@ -4,6 +4,9 @@
   "description": "A simple blogging website.",
   "main": "index.js",
   "scripts": {
+    "build": "watchify ./lib -o ./client/bundle.js -v",
+    "start": "budo . -d ./client --serve bundle.js --live",
+    "server": "nodemon ./server/index.js localhost 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/jasonveng/triceratops/issues"
   },
-  "homepage": "https://github.com/jasonveng/triceratops#readme"
+  "homepage": "https://github.com/jasonveng/triceratops#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "nodemon": "^1.8.1",
+    "superagent": "^1.7.2",
+    "tape": "^4.4.0",
+    "watchify": "^3.7.0"
+  }
 }
