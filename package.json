@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/jasonveng/triceratops#readme",
   "dependencies": {
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
     "express": "^4.13.4",
     "nodemon": "^1.8.1",
     "superagent": "^1.7.2",
