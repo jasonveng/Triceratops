@@ -3,7 +3,7 @@ var request = require('supertest')
 
 var server = require('../server/index.js')
 
-test('GET /post', function(assert) {
+test('GET /post', function(t) {
   request(server)
   .get('/post')
   .expect('Content-Type'. /json)
@@ -11,15 +11,15 @@ test('GET /post', function(assert) {
   .end(function (err, res) {
     var expectedPost = [
       {
-        "title": "cat",
-        "post": "aioafweiofaoiwef",
-        "id": "1"
+        "title": "Donald Trump",
+        "post-content": "Make America great again!!!!!",
+        "id": 1
       }
     ]
     var actualPost = res.body
-    assert.error(err, 'No error')
-    assert.same(actualPost, expectedPost, 'retrieve lists of posts')
-    assert.end()
+    t.error(err, 'No error')
+    t.same(actualPost, expectedPost, 'retrieve lists of posts')
+    t.end()
 
     post.forEach(function)
   }
