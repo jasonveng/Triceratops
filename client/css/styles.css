@@ -9,9 +9,10 @@ h1 {
 }
 
 article {
+	border-radius: 25px;
   color: 020202;
   background-color: #BEAD85;
   border-color: #BF362A;
-  border-width: 10px;
+  border-width: 25px;
   margin: 25px;
 }
