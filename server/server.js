@@ -4,6 +4,7 @@ var cors = require('cors')
 var path = require('path')
 var fs = require('fs')
 var readFilePromise = require('./readFilePromise.js')
+var writeFilePromise = require('./writeFilePromise.js')
 
 var app = express()
 app.use(cors( {
@@ -19,6 +20,16 @@ app.get('/', function (req, res) {
       res.send(data)
     .error(function (err) {
       console.log('ERROR: returning data from "/"', err)
+    })
+  })
+})
+
+app.post('/', function (req, res) {
+    writeFilePromise(path.join(__dirname, '../data/db.json'))
+      .then(function (data) {
+        res.send('post request yeilded ', data)
+      .error(function (err) {
+    	console.log('ERROR: posting data to "/"', err)
     })
   })
 })
