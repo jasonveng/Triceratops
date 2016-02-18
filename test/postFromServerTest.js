@@ -1,15 +1,7 @@
 var test = require('tape')
-var request = require('supertest')
+var postFromServer = require('../lib/ajax.js')
 
-var server = require('../server/index.js')
-
-test('GET /', function(t) {
-  request(server)
-  .get('/')
-  .expect('Content-Type', /json/)
-  .expect(200)
-  .end(function (err, res) {
-    var expectedPost = {
+var expectedPost = {
       "post": [
         {
           "title": "Donald Trump",
@@ -28,12 +20,12 @@ test('GET /', function(t) {
         }
       ]
     }
-    var actualPost = res.body
-    t.error(err, 'No error')
-    t.same(actualPost, expectedPost, 'retrieve lists of posts')
-    t.end()
 
-    // post.forEach(function)
+test('test if post from server', function(t) {
+  postFromServer(function (err, res) {
+  if (err) { console.log('ERROR testing get'); return }
+  actualPost = JSON.parse(res.text)
+  t.deepEqual(actualPost, expectedPost, "postFromServer sucessfully returned expected data")
+  t.end()
+  })
 })
-})
-
