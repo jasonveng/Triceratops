@@ -17,10 +17,16 @@ var postFromServer = require('./ajax.js')
 		postFromServer(appendCallback)
 	}
 
-	function appendCallback (data) {
-		console.log(data)
-		// $('.blog').append('<article><h2>'post.title'</h2><p>'post.post-content'</p></article>')
+	function appendCallback (err, res) {
+		// console.log(typeof res.text);
+		var parsedData = JSON.parse(res.text)
+		// console.log(parsedData.post[0])
+		// $('.blog').append(parsedData.post[0].title);
+		var post = parsedData.post[0]
+		console.log(post)
+		$('.blog').append('<article><h2>' + post.title + '</h2><p>' + post.postcontent + '</p></article>')
 	}
+	appendPosts(postFromServer)
 },{"./ajax.js":1,"jquery":4}],3:[function(require,module,exports){
 
 /**

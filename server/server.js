@@ -6,6 +6,9 @@ var fs = require('fs')
 var readFilePromise = require('./readFilePromise.js')
 
 var app = express()
+app.use(cors( {
+	origin: "http://localhost:9966"
+}))
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
