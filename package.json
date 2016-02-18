@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "watchify ./lib -o ./client/bundle.js -v",
-    "start": "budo . -d ./client --serve bundle.js --live",
+    "start": "budo ./lib -d ./client --serve bundle.js --live",
     "server": "nodemon ./server/index.js localhost 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,7 @@
     "cors": "^2.7.1",
     "es6-promise": "^3.1.2",
     "express": "^4.13.4",
+    "jquery": "^2.2.0",
     "nodemon": "^1.8.1",
     "superagent": "^1.7.2",
     "supertest": "^1.2.0",

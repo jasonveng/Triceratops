@@ -1,0 +1,18 @@
+/* black: 020202 contrast: bf362a light: bead85 lightgreen: 04471c darkgreen: 002f10 */
+
+body {
+  background-color: #002F10 
+}
+
+h1 {
+  color: #BEAD85;
+}
+
+article {
+	border-radius: 25px;
+  color: 020202;
+  background-color: #BEAD85;
+  border-color: #BF362A;
+  border-width: 25px;
+  margin: 25px;
+}
