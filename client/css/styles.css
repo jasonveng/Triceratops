@@ -5,10 +5,12 @@ body {
 }
 
 h1 {
+  text-align: center;
   color: #BEAD85;
 }
 
 article {
+  margin: 25px;
 	border-radius: 25px;
   color: 020202;
   background-color: #BEAD85;
