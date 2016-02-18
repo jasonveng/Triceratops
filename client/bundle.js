@@ -21,8 +21,6 @@ var postFromServer = require('./ajax.js')
 		console.log(data)
 		// $('.blog').append('<article><h2>'post.title'</h2><p>'post.post-content'</p></article>')
 	}
-
-
 },{"./ajax.js":1,"jquery":4}],3:[function(require,module,exports){
 
 /**
