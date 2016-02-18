@@ -2,16 +2,19 @@
   "post": [
     {
       "title": "Donald Trump",
+      "datestamp": "",
       "postcontent": "Make America great again!!!!!",
       "id": 1
     },
     {
       "title": "House of Card",
+      "datestamp": "",
       "postcontent": "House of Card is the best tv show right now",
       "id": 2
     },
     {
       "title": "javascript",
+      "datestamp": "",
       "postcontent": "javascript is great",
       "id": 3
     }
