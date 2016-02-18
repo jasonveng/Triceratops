@@ -4,14 +4,10 @@ var $ = require('jquery')
 
 
 $(function () {
-	console.log('I am initing')
-	$('h1').text = 'Hello Triceratops'
+	$('p').append('Hello There Triceratops')
 })
 
 
-$(document).ready(function() {
-	console.log('hello')
-})
 
 
 
