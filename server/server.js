@@ -25,7 +25,8 @@ app.get('/', function (req, res) {
 })
 
 app.post('/', function (req, res) {
-    writeFilePromise(path.join(__dirname, '../data/db.json'))
+  var keys = Object.keys(req.body)
+    writeFilePromise(path.join(__dirname, '../data/db.json'), keys[0])
       .then(function (data) {
         res.send('post request yeilded ', data)
       .error(function (err) {
