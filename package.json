@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "watchify ./lib -o ./client/bundle.js -v",
-    "start": "budo . -d ./client --serve bundle.js --live",
+    "start": "budo ./lib -d ./client --serve bundle.js --live",
     "server": "nodemon ./server/index.js localhost 3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
